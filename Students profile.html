@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link href="css/c3.css" rel="stylesheet">
+    <script src="js/d3-5.8.2.min.js" charset="utf-8"></script>
+	<script src="js/c3.min.js"></script>
+    <title>Students profile
+    </title>
+    <style>
+        #profimg{
+            border: solid 1px black;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            padding-bottom: 100px;
+        }
+        #details{
+
+        }
+        #add{
+            border: black 1px solid;
+            padding-left:50px ;
+            margin-top: 30px;
+            padding-bottom: 100px;
+            width: 800px;
+        }
+        label{
+            width: 300px;
+            display: inline-block;
+        }
+        p{
+            display: inline-block;
+            width: 300px;
+        }
+        #graph{
+            width:600px;
+            height: 400px;
+            border: solid 1px black;
+            padding-top: 0px;
+        }
+        #attendence{
+            margin-top: 30px;
+            width:600px;
+            height: 400px;
+            border: solid 1px black;
+        }
+        #att-nav{
+            width: 600px;
+            height: 50px;
+            background-color: black;
+            color: white;
+        }
+        #per-nav{
+            width: 600px;
+            height: 50px;
+            background-color: black;
+            color: white;
+            display: inline;
+            position: relative;
+        }
+        #Fee-nav{
+            background-color: black;
+            color: white;
+        }
+        #table-items{
+            background-color: lightblue;
+            height: 50px;
+            padding-top: 0px;
+        }
+        th,td{
+            border: solid 1px black;
+            text-emphasis: float;
+            width: 300px;
+            height: 50px;
+        }
+        #report-but{
+            margin-top: 5px;
+            margin-right: 10px;
+            font: 14px;
+            float: right;
+            border: none;
+        }
+        thead{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="details" class="row">
+        
+        <div id="add" class="col-sm-7">
+            <div>
+                <img id="profimg" src="#">
+            </div><br><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+            <p>Full Name: ########</p>
+            <p>Full Name: ########</p><br>
+
+        <div>
+            <div id="Fee-nav">
+                <h3>Fee payments Details</h3>
+            </div>
+            <div id="table-items">
+                <table>
+                    <tr>
+                      <th>Receipt No.</th>
+                      <th>Date</th>
+                      <th>Transaction No.</th>
+                      <th>Month</th>
+                      <th>Amount</th>
+                      <th>Mode</th>
+                      <th>Actions</th>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                      <th>############</th>
+                      <th>############</th>
+                      <th>##############</th>
+                      <th>############</th>
+                      <th>##############</th>
+                      <th>############</th>
+                      <th><button type="button" class="btn btn-success">Print</button></th>
+                    </tr>
+                    </table>
+                    </div>
+        </div>
+        </div>
+    
+    <div  class="col-sm-5">
+        <div id="attendence" class="row">
+            <div id="att-nav">
+                <h3>Attendence</h3>
+            </div>
+            <div>
+                <div id="divAttendance" style="display: block">
+                    <div id="div3" style="display: block; font-size: 12px;" class="table table-responsive">
+                       
+                
+                        <div style="top: 0px; position: relative; top: 0px;">
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                        <tr class="bg-light-blue">
+                                        <th>Course Name</th>
+                                        <th>Faculty Name</th>
+                                        <th>Total Classes</th>
+                                        <th>Present</th>
+                                        <th>Absent</th>
+                                        <th>Percentage</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                        <tr>
+                            <td>CE101--ENVIRONMENTAL SCIENCE</td>
+                            <td>DR. Ashish Chandra Singh</td>
+                            <td>12</td>
+                            <td>8</td>
+                            <td>4</td>
+                            <td>66</td>
+                        </tr>
+                            </table>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="graph">
+            <div id="per-nav">
+                <h3>Performance
+                <button id="report-but" class="btn btn-success">Get Report Card</button></h3>
+            </div>
+        
+            <div id="chart" ></div>
+        </div>
+    </div>
+</div>
+    <script type="text/javascript">
+        var chart = c3.generate({
+        data: {
+            columns: [
+                ['data1', 30, 200, 100, 400, 150, 250],
+                ['data2', 130, 100, 140, 200, 150, 50]
+            ],
+            type: 'bar'
+        },
+        bar: {
+            width: {
+                ratio: 0.5 // this makes bar width 50% of length between ticks
+            }
+            // or
+            //width: 100 // this makes bar width 100px
+        }
+    });
+    
+    setTimeout(function () {
+        chart.load({
+            columns: [
+                ['data3', 130, -150, 200, 300, -200, 100]
+            ]
+        });
+    }, 1000);
+    
+
+</script>
+</body>
+</html>
